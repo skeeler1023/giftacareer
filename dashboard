@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial;}
+.content-container {
+	display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    height:85vh;
+    }
+/*desktop styling*/
+@media screen and (min-width:600px){
+.tab {max-width:150px!important;
+}
+}
+.tabcontent {max-width:90%!important}
+/* Style the tab */
+.tab {
+	display:flex;
+    flex-direction:column;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  flex: 1 1 150px;
+  max-width:98%;
+  
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+  
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  -webkit-animation: fadeEffect 1s;
+  animation: fadeEffect 1s;
+  flex:2 1 400px;
+  max-width:98%;
+  border:1px solid #808080;
+}
+.tab
+
+/* Fade in tabs */
+@-webkit-keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+</style>
+</head>
+<body>
+
+<h3>Fade in Tabs</h3>
+<div class="content-container">
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'Profile')" id="defaultOpen">Profile</button>
+  <button class="tablinks" onclick="openCity(event, 'Power Skill')">Power Skill Training</button>
+  <button class="tablinks" onclick="openCity(event, 'Interviews')">Career Interviews</button>
+</div>
+
+<div id="Profile" class="tabcontent" >
+  <h3>Profile</h3>
+  <p>London is the capital city of England.</p>
+</div>
+
+<div id="Power Skill" class="tabcontent">
+  <h3>Power Skill Training</h3>
+  <div class="wpb_wrapper">
+        <style>
+.hvrbox,
+.hvrbox * {
+box-sizing: border-box;
+}
+.hvrbox {
+position: relative;
+display:block;
+width: 100%;
+min-width:200px;
+
+
+height: 100%;
+border-radius: 10px;
+margin:auto;
+}
+.hvrbox img {
+width: 100%;
+height: 100%;
+}
+.hvrbox .hvrbox-layer_bottom {
+display: block;
+border-radius: 10px;
+position:relative;
+
+
+}
+ .module {
+    position:relative; padding-top:90px;color:#fefefe; text-align:center; font-size:1.75rem;background-color: rgba(0, 0, 0, 0.1); height:100%; border-radius:10px; font-weight: 600
+}
+.hvrbox .hvrbox-layer_top {
+opacity: 0;
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+width: 100%;
+height: 100%;
+background: rgba(255, 255, 255, 0.9);
+color:black!important; 
+padding: 15px;
+-moz-transition: all 0.4s ease-in-out 0s;
+-webkit-transition: all 0.4s ease-in-out 0s;
+-ms-transition: all 0.4s ease-in-out 0s;
+transition: all 0.4s ease-in-out 0s;
+border-radius: 10px;
+}
+.hvrbox:hover .hvrbox-layer_top,
+.hvrbox.active .hvrbox-layer_top {
+opacity: 1;
+}
+.hvrbox .hvrbox-text {
+text-align: center;
+font-weight:700;
+font-size: 18px;
+display: block;
+width:100%;
+position: absolute;
+top: 50%;
+left: 50%;
+-moz-transform: translate(-50%, -50%);
+-webkit-transform: translate(-50%, -50%);
+-ms-transform: translate(-50%, -50%);
+transform: translate(-50%, -50%);
+}
+.hvrbox .hvrbox-text_mobile {
+font-size: 15px;
+border-top: 1px solid rgb(179, 179, 179); /* for old browsers */
+border-top: 1px solid rgba(179, 179, 179, 0.7);
+margin-top: 5px;
+padding-top: 2px;
+display: none;
+}
+.hvrbox.active .hvrbox-text_mobile {
+display: block;
+}
+.flex-row {
+display: flex;
+flex: 1;
+flex-direction: row;
+flex-wrap: wrap;
+    margin-top:10px;
+    justify-content:space-between;
+    width:100%;
+}
+
+.flex-col {
+margin: 6px!important;
+margin-top:10px!important;
+display: flex;
+justify-content: center;
+align-items: center;
+flex: 1 1 100px;
+flex-direction: column;
+color: white;
+box-sizing:border-box;
+}
+
+
+
+</style>
+<table style="width:98%; margin:auto; text-align:center;  border:none">
+<tbody><tr class="flex-row">
+    <td class="flex-col"><div class="hvrbox">
+<div class="hvrbox-layer_bottom" style="background: url('https://launchcompass.org/wp-content/uploads/2019/04/workplace-tools.jpg'); background-size:cover; height:200px;">
+<div class="module" style="position:relative; padding-top:90px;color:#fefefe; text-align:center; font-size:1.75rem;background-color: rgba(0, 0, 0, 0.1); height:100%; border-radius:10px">Business Skills
+    </div></div>
+<div class="hvrbox-layer_top">
+    <div class="hvrbox-text">
+        <div style="overflow-y:auto;height:200px">
+            Business Budgeting    <br>
+Business Ethics<br>
+Business Etiquette<br>
+Business Meal Etiquette<br>
+Competitiveness<br>
+Creating A Standout Resume<br>
+Customer Service<br>
+Deal Making<br>
+Decision Making<br>
+Fundraising<br>
+Interviewing<br>
+Negotiation<br>
+Remembering Names<br>
+Results-Orientation<br>
+Selling Skills<br>
+Selling You<br>
+Storytelling In Business
+        </div></div>
+</div>
+</div></td>
+    <td class="flex-col"><div class="hvrbox">
+<div class="hvrbox-layer_bottom" style="background: url('https://launchcompass.org/wp-content/uploads/2020/03/iStock-1070427216-1.jpg'); background-size:cover; height:200px;"><div class="module" style="position:relative; padding-top:90px;color:#fefefe; text-align:center; font-size:1.75rem; background-color: rgba(0, 0, 0, 0.5)">Communication Skills
+    </div></div>
+<div class="hvrbox-layer_top">
+    <div class="hvrbox-text">
+        <div style="overflow-y:auto;height:200px">
+            Advanced Presentation Skills <br>
+Choosing A Communication Medium<br>
+Communicating Clearly<br>
+Communicating Through Body Language<br>
+Having Great Conversations<br>
+Listening<br>
+Nonverbal Communication<br>
+Persuasion<br>
+Public Speaking<br>
+Reading Body Language<br>
+Storytelling<br>
+Verbal Communication<br>
+Verbal Self-Defense<br>
+Visual Communication<br>
+Writing Proposals<br>
+Writing Reports<br>
+Writing Skills<br>
+        </div></div>
+</div>
+</div></td>
+    <td class="flex-col"><div class="hvrbox">
+<div class="hvrbox-layer_bottom" style="background: url('https://launchcompass.org/wp-content/uploads/2019/04/interpersonal-skills.jpg'); background-size:cover; height:200px;"><div class="module" style="position:relative; padding-top:90px;color:#fefefe; text-align:center; font-size:1.75rem">Critical Thinking
+    </div></div>
+<div class="hvrbox-layer_top">
+    <div class="hvrbox-text">
+        <div style="overflow-y:auto;height:200px">
+            Adaptability <br>
+Artistic Aptitude<br>
+Creativity<br>
+Critical Observation<br>
+Critical Thinking<br>
+Design Aptitude<br>
+Desire to Learn<br>
+Hypothesis Testing<br>
+Innovation<br>
+Logical Thinking<br>
+Problem Solving<br>
+Research<br>
+Resourcefulness<br>
+Self Assessment &amp; Correction<br>
+Thinking Outside the Box<br>
+Tolerance of Change and Uncertainty<br>
+Troubleshooting<br>
+Value Education<br>
+Willingness to Learn
+        </div></div>
+</div>
+</div></td>
+    <td class="flex-col"><div class="hvrbox">
+<div class="hvrbox-layer_bottom" style="background: url('https://launchcompass.org/wp-content/uploads/2019/04/customer-service.jpg'); background-size:cover; height:200px;"><div class="module" style="position:relative; padding-top:90px;color:#fefefe; text-align:center; font-size:1.75rem">Financial Literacy
+    </div></div>
+<div class="hvrbox-layer_top">
+    <div class="hvrbox-text">
+        <div style="overflow-y:auto;height:200px">
+            Accounting Report Basics<br>
+Borrowing &amp; Debt<br>
+Budgeting<br>
+Credit Reports<br>
+Financial Decision-Making<br>
+Financial Terminology<br>
+Identity Theft Awareness<br>
+Investment Strategies<br>
+Loaning To Friends<br>
+Long-Term Financial Planning<br>
+Managing Credit Card Debt<br>
+Personal Financial Health Check<br>
+Philanthropy<br>
+Protecting Your Data<br>
+Savings Strategies<br>
+Setting Personal Financial Goals<br>
+Student Loan Debt
+        </div></div>
+</div>
+</div></td>
+    <td class="flex-col"><div class="hvrbox">
+<div class="hvrbox-layer_bottom" style="background: url('https://launchcompass.org/wp-content/uploads/2019/04/launching-career-484x264.jpg'); background-size:cover; height:200px;"><div class="module" style="position:relative; padding-top:90px;color:#fefefe; text-align:center; font-size:1.75rem">Interpersonal Skills
+    </div></div>
+<div class="hvrbox-layer_top">
+    <div class="hvrbox-text">
+        <div style="overflow-y:auto;height:200px">
+            Accepting Negative Feedback<br>
+The Art of Authenticity<br>
+Building Great Relationships<br>
+Building Interpersonal Relationships<br>
+Collaboration<br>
+Cooperation<br>
+Dealing With Difficult Situations<br>
+Dealing With Office Politics<br>
+Disability Awareness<br>
+Diversity Awareness<br>
+Emotional Intelligence<br>
+Empathy<br>
+Intercultural Competence<br>
+Interpersonal Skills<br>
+Networking<br>
+Self-Awareness<br>
+Social Skills<br>
+Teamwork
+        </div></div>
+</div>
+</div></td>
+    
+    <td class="flex-col"><div class="hvrbox">
+<div class="hvrbox-layer_bottom" style="background: url('https://launchcompass.org/wp-content/uploads/2019/04/habits-for-success-484x264.jpg'); background-size:cover; height:200px;"><div class="module" style="position:relative; padding-top:90px;color:#fefefe; text-align:center; font-size:1.75rem">Managing Work
+    </div></div>
+<div class="hvrbox-layer_top">
+    <div class="hvrbox-text">
+        <div style="overflow-y:auto;height:200px">
+            Flexibility<br>
+Gossip<br>
+Implementing Strategy<br>
+Keeping Teams on Track<br>
+Management<br>
+Managing Difficult Conversations<br>
+Managing Remote Teams<br>
+Meeting Management<br>
+Productive Brainstorming<br>
+Project Management<br>
+Sexual Harassment<br>
+Supervising<br>
+Team Building<br>
+Working With The Five Generations
+        </div></div>
+</div>
+</div></td>
+    <td class="flex-col"><div class="hvrbox">
+<div class="hvrbox-layer_bottom" style="background: url('https://launchcompass.org/wp-content/uploads/2019/04/human-resources-484x264.jpg'); background-size:cover; height:200px;"><div class="module" style="position:relative; padding-top:90px;color:#fefefe; text-align:center; font-size:1.75rem">Team Player
+    </div></div>
+<div class="hvrbox-layer_top">
+    <div class="hvrbox-text">
+        <div style="overflow-y:auto;height:200px">
+                Confidence<br>
+Courtesy<br>
+Dedication<br>
+Dependability<br>
+Energy<br>
+Enthusiasm<br>
+Following Directions<br>
+Friendliness<br>
+Humor<br>
+Independence<br>
+Integrity<br>
+Patience<br>
+Perseverance<br>
+Reliability<br>
+Respectability<br>
+Respectfulness<br>
+Trainability
+        </div></div>
+</div>
+</div></td>
+    
+    
+    <td class="flex-col"><div class="hvrbox">
+<div class="hvrbox-layer_bottom" style="background: url('https://launchcompass.org/wp-content/uploads/2019/04/financial-fundamentals.jpg'); background-size:cover; height:200px;"><div class="module" style="position:relative; padding-top:90px;color:#fefefe; text-align:center; font-size:1.75rem">Workplace Skills
+    </div></div>
+<div class="hvrbox-layer_top">
+    <div class="hvrbox-text">
+        <div style="overflow-y:auto;height:200px">
+                Attentiveness<br>
+Email Etiquette<br>
+Meeting Deadlines<br>
+Motivation<br>
+Multitasking<br>
+Organization<br>
+Persistence<br>
+Punctuality<br>
+Record Keeping<br>
+Scheduling<br>
+Self-Direction<br>
+Self-Monitoring<br>
+Self-Supervising<br>
+Staying on Task<br>
+Strategic Planning<br>
+Time Management<br>
+Workplace Tools
+        </div></div>
+</div>
+</div></td>
+    
+    
+    <td class="flex-col" id="content-tablet-2"><div class="hvrbox"></div></td>
+</tr>
+  </tbody></table>
+    </div> 
+</div>
+
+<div id="Interviews" class="tabcontent">
+  <h3>Career Interviews</h3>
+ <style>
+* {
+
+}
+
+#myInput {
+  background-image: url('https://blog.thescla.org/wp-content/uploads/2020/07/search-icon.png');
+  background-position: 10px 10px;
+background-size:auto 60%;
+  background-repeat: no-repeat;
+  width: 90%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+  height:100px;
+}
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  background-color: #f1f1f1;
+  
+  
+}
+
+/*td style */
+.titletd {
+	width:60%;
+    }
+    .career {
+    width:40%;
+    }
+</style>
+<input type="text" id="myInput" onkeyup="filterTable(event)" placeholder="Search for a Professional Title or Career Field..." title="Type in a name" >
+<table style="border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+  background-color: #f1f1f1;text-align:left; margin-bottom:0px ">
+  <tbody><tr class="header" style="padding:10px">
+    <th style="width:60%;padding:10px ">Career Field</th>
+    <th style="width:40%; padding:10px">Industry</th>
+  </tr>
+  </tbody></table>
+ 
+<div style="max-height:60vh; overflow-y:scroll">
+  <table id="myTable" class="display">
+  
+  <tbody><tr>
+   
+<td class="titletd"><a href="https://www.thescla.org/news/470" target="_blank" rel="noopener noreferrer">Insurance</a></td>	<td class="career">Entrepreneur, Insurance Agency Owner</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/471" target="_blank" rel="noopener noreferrer">Healthcare, Physician</a></td>	<td class="career">Physician, Medical Director Outpatient Clinic</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/298" target="_blank" rel="noopener noreferrer">Law Enforcement</a></td>	<td class="career">Police Officer</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/408" target="_blank" rel="noopener noreferrer">Public Relations</a></td>	<td class="career">Media Relations Executive</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/426" target="_blank" rel="noopener noreferrer">Sales, Medicine</a></td>	<td class="career">Sales Manager, Medical Devices</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/458" target="_blank" rel="noopener noreferrer">Lawyer</a></td>	<td class="career">Lawyer, Senior</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/331" target="_blank" rel="noopener noreferrer">Chef</a></td>	<td class="career">Culinary, Private Chef</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/468" target="_blank" rel="noopener noreferrer">Finance, Retail Banking</a></td>	<td class="career">Bank Vice President</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/299" target="_blank" rel="noopener noreferrer">Alternative Medicine</a></td>	<td class="career">Acupuncturist</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/300" target="_blank" rel="noopener noreferrer">Lawyer</a></td>	<td class="career">Lawyer, Family Law</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/301" target="_blank" rel="noopener noreferrer">Technology, Data</a></td>	<td class="career">Technology, Big Data Analyst</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/302" target="_blank" rel="noopener noreferrer">Real Estate Sales</a></td>	<td class="career">Real Estate Agent</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/357" target="_blank" rel="noopener noreferrer">Healthcare, Physical Therapist</a></td>	<td class="career">Physical Therapist</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/386" target="_blank" rel="noopener noreferrer">Healthcare, Dentist</a></td>	<td class="career">Dentist, General Practice</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/466" target="_blank" rel="noopener noreferrer">Finance, Mortgages</a></td>	<td class="career">Loan Officer</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/467" target="_blank" rel="noopener noreferrer">Healthcare, Podiatrist</a></td>	<td class="career">Podiatrist</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/469" target="_blank" rel="noopener noreferrer">Sales, Healthcare</a></td>	<td class="career">Sales, Senior Medical Sales Representative</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/358" target="_blank" rel="noopener noreferrer">Entertainment Marketing</a></td>	<td class="career">Marketing, Entertainment Company</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/303" target="_blank" rel="noopener noreferrer">Marketing</a></td>	<td class="career">Marketing, Senior Manager</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/332" target="_blank" rel="noopener noreferrer">Business, Fitness</a></td>	<td class="career">Fitness, Gym Owner</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/387" target="_blank" rel="noopener noreferrer">Advertising</a></td>	<td class="career">Marketing, Proposal Coordinator Advertising Agency</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/409" target="_blank" rel="noopener noreferrer">Entrepreneur, VIdeo Media</a></td>	<td class="career">Video Production Company, Owner</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/427" target="_blank" rel="noopener noreferrer">Marketing</a></td>	<td class="career">Marketing, Consumer Marketing Manager</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/333" target="_blank" rel="noopener noreferrer">Waste Management</a></td>	<td class="career">Manager, Waste Management</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/359" target="_blank" rel="noopener noreferrer">Landscaping</a></td>	<td class="career">Entrepreneur, Landscaping Company</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/388" target="_blank" rel="noopener noreferrer">Marketing, Media</a></td>	<td class="career">Marketing, Promotions</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/410" target="_blank" rel="noopener noreferrer">Technology</a></td>	<td class="career">Technology, Director Global Accounts</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/428" target="_blank" rel="noopener noreferrer">Financial Services</a></td>	<td class="career">Financial Services, Retirement Planning</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/459" target="_blank" rel="noopener noreferrer">Engineering, Aerospace</a></td>	<td class="career">Aerospace Engineering, Director of Business Development</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/472" target="_blank" rel="noopener noreferrer">Technology, Client Relations</a></td>	<td class="career">Customer Service, Technology Startup</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/473" target="_blank" rel="noopener noreferrer">Marketing, Healthcare</a></td>	<td class="career">Marketing, Chief Brand Strategist, Pharmaceuticals</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/476" target="_blank" rel="noopener noreferrer">Lawyer</a></td>	<td class="career">Lawyer, Cosmetics Company</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/477" target="_blank" rel="noopener noreferrer">Entrepreneur, Food Services</a></td>	<td class="career">Entrepreneur, Bakery Owner</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/304" target="_blank" rel="noopener noreferrer">Education, Teacher</a></td>	<td class="career">Teacher, Skills Trainer Special Needs</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/431" target="_blank" rel="noopener noreferrer">Retail</a></td>	<td class="career">Retail, Sales Associate</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/430" target="_blank" rel="noopener noreferrer">Finance</a></td>	<td class="career">Financial Analyst</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/305" target="_blank" rel="noopener noreferrer">Insurance</a></td>	<td class="career">Insurance, Senior Claims Representative</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/306" target="_blank" rel="noopener noreferrer">Technology, Government Contracting</a></td>	<td class="career">Entrepreneur, Government Contracting IT</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/334" target="_blank" rel="noopener noreferrer">Interior Design</a></td>	<td class="career">Entrepreneur, Interior Design Company</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/361" target="_blank" rel="noopener noreferrer">Music</a></td>	<td class="career">Artist/Producer, House Music</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/389" target="_blank" rel="noopener noreferrer">Banking</a></td>	<td class="career">Banking, Senior Operational Risk Consultant</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/411" target="_blank" rel="noopener noreferrer">Federal Government, FDA</a></td>	<td class="career">Government, Commissioner Regulatory Affairs FDA</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/307" target="_blank" rel="noopener noreferrer">Fitness</a></td>	<td class="career">Personal Trainer</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/308" target="_blank" rel="noopener noreferrer">Technology, Software</a></td>	<td class="career">Technology, VP Software Development</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/335" target="_blank" rel="noopener noreferrer">Consulting</a></td>	<td class="career">Consultant, Operations</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/362" target="_blank" rel="noopener noreferrer">Healthcare, Physician</a></td>	<td class="career">Physician, Nephrologist</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/390" target="_blank" rel="noopener noreferrer">Technology, Management</a></td>	<td class="career">Technology, Manager Data Center Solutions</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/412" target="_blank" rel="noopener noreferrer">Marketing, Food Retail</a></td>	<td class="career">Marketing, Director Customer Relationship Retail</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/429" target="_blank" rel="noopener noreferrer">Graphic Design, Advertising</a></td>	<td class="career">Art Director, Advertising Firm</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/460" target="_blank" rel="noopener noreferrer">Banking, Retail</a></td>	<td class="career">Banking, Personal Banker / Teller</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/478" target="_blank" rel="noopener noreferrer">Photography</a></td>	<td class="career">Photographer</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/309" target="_blank" rel="noopener noreferrer">Accountant</a></td>	<td class="career">Accountant</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/336" target="_blank" rel="noopener noreferrer">Technology, Management</a></td>	<td class="career">Technology, SVP of Sales and Marketing</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/363" target="_blank" rel="noopener noreferrer">Insurance Sales</a></td>	<td class="career">Insurance, Vice President of Sales</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/391" target="_blank" rel="noopener noreferrer">Event Planning</a></td>	<td class="career">Event Planning and Promotions</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/413" target="_blank" rel="noopener noreferrer">Retail</a></td>	<td class="career">Retail Sales Associate</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/446" target="_blank" rel="noopener noreferrer">Human Resources</a></td>	<td class="career">Recruiting Executive</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/461" target="_blank" rel="noopener noreferrer">Real Estate</a></td>	<td class="career">Real Estate Agent, Small Company</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/479" target="_blank" rel="noopener noreferrer">Real Estate</a></td>	<td class="career">Real Estate Investor, Commercial Properties</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/310" target="_blank" rel="noopener noreferrer">Marketing</a></td>	<td class="career">Marketing, Account Director</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/337" target="_blank" rel="noopener noreferrer">Technology, Mapping</a></td>	<td class="career">Technology, Sales Mapping Business</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/364" target="_blank" rel="noopener noreferrer">Social Services</a></td>	<td class="career">Social Services, Lead Youth Residential Counselor</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/392" target="_blank" rel="noopener noreferrer">Higher Education</a></td>	<td class="career">Higher Education, Program Coordinator</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/414" target="_blank" rel="noopener noreferrer">Risk Management</a></td>	<td class="career">Actuary, VP Risk Management</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/311" target="_blank" rel="noopener noreferrer">Healthcare, Physician</a></td>	<td class="career">Physician, Facial Reconstruction Surgeon</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/338" target="_blank" rel="noopener noreferrer">Technology, Management</a></td>	<td class="career">Technical Manager</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/312" target="_blank" rel="noopener noreferrer">Education, Esports</a></td>	<td class="career">Esports, Professor</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/339" target="_blank" rel="noopener noreferrer">Education, Esports</a></td>	<td class="career">Esports, Director of University Program</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/365" target="_blank" rel="noopener noreferrer">Education, Esports</a></td>	<td class="career">Esports, Head Coach</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/313" target="_blank" rel="noopener noreferrer">Lawyer</a></td>	<td class="career">Lawyer, Trial Attorney Department of Justice</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/340" target="_blank" rel="noopener noreferrer">Education, Teacher</a></td>	<td class="career">Teacher, Special Education</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/314" target="_blank" rel="noopener noreferrer">Financial Services</a></td>	<td class="career">Banking, Senior Relationship Strategist</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/341" target="_blank" rel="noopener noreferrer">Lawyer</a></td>	<td class="career">Lawyer, Corporate General Counsel</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/366" target="_blank" rel="noopener noreferrer">Healthcare, Nurse</a></td>	<td class="career">Nurse, RN Hospital</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/393" target="_blank" rel="noopener noreferrer">Finance, Construction</a></td>	<td class="career">Finance Director, Construction Company</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/415" target="_blank" rel="noopener noreferrer">Education, Management</a></td>	<td class="career">Higher Education, Director of Online Operations</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/447" target="_blank" rel="noopener noreferrer">Education, Management</a></td>	<td class="career">Education, Superintendent of Schools</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/432" target="_blank" rel="noopener noreferrer">Writer</a></td>	<td class="career">Writer, Blogs</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/315" target="_blank" rel="noopener noreferrer">Healthcare, Physicians Assistant</a></td>	<td class="career">Physician Assistant</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/342" target="_blank" rel="noopener noreferrer">Marketing, Technology</a></td>	<td class="career">Marketing, Senior Professional</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/367" target="_blank" rel="noopener noreferrer">Healthcare, Physician</a></td>	<td class="career">Physician</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/394" target="_blank" rel="noopener noreferrer">Healthcare, Physician</a></td>	<td class="career">Physician, Obstetrics and Gynecology (OBGYN)</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/416" target="_blank" rel="noopener noreferrer">Entertainment, Television</a></td>	<td class="career">Television, Audience Coordinator</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/448" target="_blank" rel="noopener noreferrer">Nonprofit</a></td>	<td class="career">Nonprofit, Director of Family Support Services</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/462" target="_blank" rel="noopener noreferrer">Sales, Air Filter Technology</a></td>	<td class="career">Sales, Air Filter Products</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/433" target="_blank" rel="noopener noreferrer">Healthcare, Nurse</a></td>	<td class="career">Nurse, Pediatric ICU</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/434" target="_blank" rel="noopener noreferrer">Lawyer</a></td>	<td class="career">Lawyer, Employment and Contracts</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/316" target="_blank" rel="noopener noreferrer">Entertainment</a></td>	<td class="career">Entertainment, Creative Coordinator</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/317" target="_blank" rel="noopener noreferrer">Technology, Consultant</a></td>	<td class="career">Technology, Cybersecurity Advisor</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/343" target="_blank" rel="noopener noreferrer">Nonprofit, Management</a></td>	<td class="career">Nonprofit CEO, Youth Travel Organization</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/368" target="_blank" rel="noopener noreferrer">Engineer, Healthcare</a></td>	<td class="career">Physician Engineer</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/395" target="_blank" rel="noopener noreferrer">Construction, Management</a></td>	<td class="career">Construction Management, Senior VP</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/417" target="_blank" rel="noopener noreferrer">Media, Education</a></td>	<td class="career">Educational Media, Managing Director</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/450" target="_blank" rel="noopener noreferrer">Nonprofit, Social Service</a></td>	<td class="career">Nonprofit, Director</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/463" target="_blank" rel="noopener noreferrer">Technology, Software</a></td>	<td class="career">Technology, CEO Software Engineering Business</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/480" target="_blank" rel="noopener noreferrer">Scientist, Research</a></td>	<td class="career">Scientist, Director Center for Cancer Research</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/318" target="_blank" rel="noopener noreferrer">Education, Teacher</a></td>	<td class="career">Teacher, High School Math</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/344" target="_blank" rel="noopener noreferrer">Human Resources, Healthcare</a></td>	<td class="career">Recruiter, Physicians</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/373" target="_blank" rel="noopener noreferrer">Architect</a></td>	<td class="career">Architect</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/396" target="_blank" rel="noopener noreferrer">Healthcare, Physician</a></td>	<td class="career">Physician, Radiologist</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/451" target="_blank" rel="noopener noreferrer">Higher Education, Professor</a></td>	<td class="career">Professor, English</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/464" target="_blank" rel="noopener noreferrer">Nonprofit</a></td>	<td class="career">Nonprofit, Director of Engagement</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/512" target="_blank" rel="noopener noreferrer">Marketing, Communications</a></td>	<td class="career">Marketing Communications Director</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/481" target="_blank" rel="noopener noreferrer">Psychology</a></td>	<td class="career">Psychologist, Partner in Consulting Firm</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/482" target="_blank" rel="noopener noreferrer">Accountant</a></td>	<td class="career">Accountant</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/435" target="_blank" rel="noopener noreferrer">Finance, Investments</a></td>	<td class="career">Investment Advisor</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/319" target="_blank" rel="noopener noreferrer">Medical Marijuana, Healthcare</a></td>	<td class="career">Entrepreneur, Medical Marijuana Caregiver</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/345" target="_blank" rel="noopener noreferrer">Chemistry, Product Development</a></td>	<td class="career">Chemist, Technical Director Product Development</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/374" target="_blank" rel="noopener noreferrer">Nonprofit, Healthcare</a></td>	<td class="career">Nonprofit Behavioral Health, CEO</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/320" target="_blank" rel="noopener noreferrer">Education, Teacher</a></td>	<td class="career">Teacher, Middle School World Studies</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/346" target="_blank" rel="noopener noreferrer">Lawyer</a></td>	<td class="career">Lawyer, Chief of Administration and Policy, Government</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/376" target="_blank" rel="noopener noreferrer">Education, Nonprofit</a></td>	<td class="career">Nonprofit, CEO Junior Achievement</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/397" target="_blank" rel="noopener noreferrer">Real Estate Investor</a></td>	<td class="career">Real Estate Investor / Property Manager</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/419" target="_blank" rel="noopener noreferrer">Technology, Consulting</a></td>	<td class="career">Technology, VP of Operations IT Consulting</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/321" target="_blank" rel="noopener noreferrer">Education, Recruiting</a></td>	<td class="career">Education, Director of Recruitment, Boarding School</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/347" target="_blank" rel="noopener noreferrer">Banking</a></td>	<td class="career">Banking, Director or Market Support</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/377" target="_blank" rel="noopener noreferrer">Healthcare, Nurse</a></td>	<td class="career">Nurse, RN (Wound, Ostomy)</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/398" target="_blank" rel="noopener noreferrer">Medical</a></td>	<td class="career">Dietitian</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/322" target="_blank" rel="noopener noreferrer">Sports, Nonprofit</a></td>	<td class="career">Nonprofit Director, Sports Organization</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/348" target="_blank" rel="noopener noreferrer">Technology, Sales</a></td>	<td class="career">Technology, Software Sales</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/378" target="_blank" rel="noopener noreferrer">Lawyer</a></td>	<td class="career">Lawyer, Child Services</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/399" target="_blank" rel="noopener noreferrer">Lawyer</a></td>	<td class="career">Lawyer, Senior Staff</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/420" target="_blank" rel="noopener noreferrer">Human Resources, Recruiter</a></td>	<td class="career">Recruitment Coordinator</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/406" target="_blank" rel="noopener noreferrer">Accounting</a></td>	<td class="career">Accountant and Administrative Support, Small Business</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/436" target="_blank" rel="noopener noreferrer">Biotechnology</a></td>	<td class="career">Project Manager, Biotech Firm</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/437" target="_blank" rel="noopener noreferrer">Accounting</a></td>	<td class="career">Controller</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/454" target="_blank" rel="noopener noreferrer">Electrician</a></td>	<td class="career">Electrician, Master</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/465" target="_blank" rel="noopener noreferrer">Event Planning, Hospitality</a></td>	<td class="career">Wedding Planner</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/483" target="_blank" rel="noopener noreferrer">Lobbyist, Biotechnoogy</a></td>	<td class="career">Regulatory Affairs Associate, Biotechnology</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/576" target="_blank" rel="noopener noreferrer">Associations</a></td>	<td class="career">Associations</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/540" target="_blank" rel="noopener noreferrer">Public Health</a></td>	<td class="career">Public Health</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/533" target="_blank" rel="noopener noreferrer">Education, Teacher</a></td>	<td class="career">Education</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/541" target="_blank" rel="noopener noreferrer">Non-profit, Healthcare</a></td>	<td class="career">Non-profit, Healthcare</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/542" target="_blank" rel="noopener noreferrer">Education, Teacher</a></td>	<td class="career">Education</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/556" target="_blank" rel="noopener noreferrer">Graphic Design</a></td>	<td class="career">Graphic Design</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/562" target="_blank" rel="noopener noreferrer">Lobbyist, Lawyer</a></td>	<td class="career">Lobbyist, Lawyer</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/549" target="_blank" rel="noopener noreferrer">Real Estate Marketing</a></td>	<td class="career">Real Estate</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/550" target="_blank" rel="noopener noreferrer">Consulting, Marketing</a></td>	<td class="career">Consulting, Marketing</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/551" target="_blank" rel="noopener noreferrer">Human Resouces, Consulting</a></td>	<td class="career">Human Resouces, Consulting</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/484" target="_blank" rel="noopener noreferrer">Higher Education</a></td>	<td class="career">Program Manager, Scholars and Honors College</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/485" target="_blank" rel="noopener noreferrer">Higher Education</a></td>	<td class="career">Higher Education, Director of Scholars Program</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/323" target="_blank" rel="noopener noreferrer">Advertising</a></td>	<td class="career">Advertising, Director</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/349" target="_blank" rel="noopener noreferrer">Behavioral Therapy</a></td>	<td class="career">Behavioral Therapy</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/379" target="_blank" rel="noopener noreferrer">Travel Consultant</a></td>	<td class="career">Travel, Customer Success Manager</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/400" target="_blank" rel="noopener noreferrer">Cosmetology</a></td>	<td class="career">Hair Stylist</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/421" target="_blank" rel="noopener noreferrer">Healthcare, Occupational Therapist</a></td>	<td class="career">Occupational Therapist</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/455" target="_blank" rel="noopener noreferrer">Property Management</a></td>	<td class="career">Real Estate, Owner Property Management Company</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/474" target="_blank" rel="noopener noreferrer">Education, Teacher</a></td>	<td class="career">Teacher, 4th Grade</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/487" target="_blank" rel="noopener noreferrer">Cleaning Business Owner</a></td>	<td class="career">Entrepreneur, Carpet Cleaning Company Owner</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/530" target="_blank" rel="noopener noreferrer">Technology, Management</a></td>	<td class="career">Technology, Chief Technical Officer</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/529" target="_blank" rel="noopener noreferrer">Technology, Developer</a></td>	<td class="career">Technology, Software Developer</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/528" target="_blank" rel="noopener noreferrer">Residential Cleaning</a></td>	<td class="career">Housekeeper, Self-Employed</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/527" target="_blank" rel="noopener noreferrer">Real Estate, Property Management</a></td>	<td class="career">Real Estate, Property Asset Manager</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/526" target="_blank" rel="noopener noreferrer">Engineer</a></td>	<td class="career">Engineer, Corrosion and Materials</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/525" target="_blank" rel="noopener noreferrer">Installer, Telecom</a></td>	<td class="career">Installment Technician and Fiber-Optics Splicer</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/524" target="_blank" rel="noopener noreferrer">Education, Teacher</a></td>	<td class="career">Teacher, Elementary School</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/523" target="_blank" rel="noopener noreferrer">Finance Mortgage Banking</a></td>	<td class="career">Mortgage Banker</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/522" target="_blank" rel="noopener noreferrer">Non-Profit</a></td>	<td class="career">Nonprofit, Membership and Admin Coordinator</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/521" target="_blank" rel="noopener noreferrer">Electrician</a></td>	<td class="career">Electrical Contractor</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/520" target="_blank" rel="noopener noreferrer">Commercial Construction</a></td>	<td class="career">Warehouse Manager</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/519" target="_blank" rel="noopener noreferrer">Higher Education</a></td>	<td class="career">Professor, Accounting</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/518" target="_blank" rel="noopener noreferrer">Technology</a></td>	<td class="career">Software Engineer, Smart Home Devices</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/517" target="_blank" rel="noopener noreferrer">Technology</a></td>	<td class="career">Software Engineer Level 5</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/516" target="_blank" rel="noopener noreferrer">Property Management</a></td>	<td class="career">Real Estate, Property Management VP</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/515" target="_blank" rel="noopener noreferrer">Property Management</a></td>	<td class="career">Real Estate, Property Manager</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/514" target="_blank" rel="noopener noreferrer">Lawyer</a></td>	<td class="career">Law, Trial Consultant</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/511" target="_blank" rel="noopener noreferrer">Healthcare, Education</a></td>	<td class="career">Health Promotion Coordinator</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/453" target="_blank" rel="noopener noreferrer">Entrepreneur, Wedding and Floral Business</a></td>	<td class="career">Bridal and Floral Businesses, Owner</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/510" target="_blank" rel="noopener noreferrer">Education, Teacher</a></td>	<td class="career">Teacher, Middle School English and Literature</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/509" target="_blank" rel="noopener noreferrer">Automative Technician</a></td>	<td class="career">Automotive Technician, Lead Heavy Duty</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/452" target="_blank" rel="noopener noreferrer">Engineering, Semi-Conductors</a></td>	<td class="career">Engineer, Semi-Conductor Test Design</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/324" target="_blank" rel="noopener noreferrer">Healthcare, Physician</a></td>	<td class="career">Physician, Emergency (ER)</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/350" target="_blank" rel="noopener noreferrer">Scientist, Research</a></td>	<td class="career">Scientist, National Institutes of Health</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/380" target="_blank" rel="noopener noreferrer">Healthcare, Physician</a></td>	<td class="career">Physician, Emergency (ER)</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/325" target="_blank" rel="noopener noreferrer">Higher Education, Athletics</a></td>	<td class="career">Athletic Director, Air Force Academy</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/351" target="_blank" rel="noopener noreferrer">Higher Education, Administration</a></td>	<td class="career">Education, Senior Vice Provost of Faculty Affairs</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/381" target="_blank" rel="noopener noreferrer">Nonprofit, Public Policy</a></td>	<td class="career">Nonprofit, Lobbyist</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/402" target="_blank" rel="noopener noreferrer">Power and Energy, Business Development</a></td>	<td class="career">Sales, Manager of Federal Business Development</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/422" target="_blank" rel="noopener noreferrer">Healthcare, Management</a></td>	<td class="career">Health Clinic, SVP Operations</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/449" target="_blank" rel="noopener noreferrer">Accounting</a></td>	<td class="career">Accounting Manager, Sustainable Energy</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/326" target="_blank" rel="noopener noreferrer">Retail</a></td>	<td class="career">Retail, Fashion Buyer</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/352" target="_blank" rel="noopener noreferrer">Sales</a></td>	<td class="career">Technology Sales, Commercial Account Manager</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/382" target="_blank" rel="noopener noreferrer">Scientist, Quality Control</a></td>	<td class="career">Quality Manager, Laboratory</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/403" target="_blank" rel="noopener noreferrer">Entrepreneur, Floral</a></td>	<td class="career">Entrepreneur, Owner Floral Business</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/423" target="_blank" rel="noopener noreferrer">Emergency Management</a></td>	<td class="career">Disaster Relief Director</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/456" target="_blank" rel="noopener noreferrer">Psychology</a></td>	<td class="career">Psychologist, Industrial/Organizational</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/475" target="_blank" rel="noopener noreferrer">Consultant</a></td>	<td class="career">Consultant, Sales and Marketing</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/508" target="_blank" rel="noopener noreferrer">Human Resources</a></td>	<td class="career">Human Resource Director</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/507" target="_blank" rel="noopener noreferrer">Finance, Investing</a></td>	<td class="career">Investment Firm, Senior Strategist</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/506" target="_blank" rel="noopener noreferrer">Death Care</a></td>	<td class="career">Entrepreneur, Founder Death Care Company</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/505" target="_blank" rel="noopener noreferrer">Education, Counselor</a></td>	<td class="career">Counselor, Middle School</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/504" target="_blank" rel="noopener noreferrer">Education, Teacher</a></td>	<td class="career">Teacher, Middle School Spanish and ESOL</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/503" target="_blank" rel="noopener noreferrer">Sales</a></td>	<td class="career">Sales, Account Executive</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/502" target="_blank" rel="noopener noreferrer">Digital Marketing</a></td>	<td class="career">Marketing Agency, Digital Client Strategy</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/501" target="_blank" rel="noopener noreferrer">Sports, Fitness</a></td>	<td class="career">Fitness, Program Director and Owner Swim Program</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/500" target="_blank" rel="noopener noreferrer">Recruiting</a></td>	<td class="career">Recruiter, Staffing</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/499" target="_blank" rel="noopener noreferrer">Real Estate, Management</a></td>	<td class="career">Commercial Real Estate, Principal</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/498" target="_blank" rel="noopener noreferrer">Social Worker</a></td>	<td class="career">Social Worker, Permanency Specialist Post-Adoption</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/497" target="_blank" rel="noopener noreferrer">Event Marketing</a></td>	<td class="career">Marketing, Manager Advertising, Promotions, and Events</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/496" target="_blank" rel="noopener noreferrer">Lawyer</a></td>	<td class="career">Divorce Lawyer</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/495" target="_blank" rel="noopener noreferrer">Entrepreneur, Advertising Firm</a></td>	<td class="career">Promotional Advertising Company, Owner</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/494" target="_blank" rel="noopener noreferrer">Customer Service</a></td>	<td class="career">Customer Experience, Director</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/493" target="_blank" rel="noopener noreferrer">Lawyer</a></td>	<td class="career">Attorney, Regulatory Counsel for the FDA</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/492" target="_blank" rel="noopener noreferrer">Lawyer</a></td>	<td class="career">Trial Attorney, Attorney General’s Office</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/491" target="_blank" rel="noopener noreferrer">Hospitality, Management</a></td>	<td class="career">Hospitality, VP Food and Beverage</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/490" target="_blank" rel="noopener noreferrer">Healthcare, Customer Service</a></td>	<td class="career">Patient Service Representative</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/489" target="_blank" rel="noopener noreferrer">Physical Therapist, Healthcare</a></td>	<td class="career">Physical Therapist, Dementia Patients</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/488" target="_blank" rel="noopener noreferrer">Sales, Construction</a></td>	<td class="career">Construction Sales, Senior Project Management</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/486" target="_blank" rel="noopener noreferrer">Accounting</a></td>	<td class="career">Accountant, Senior Vice President of Finance Solutions</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/441" target="_blank" rel="noopener noreferrer">Entrereneur, Cleaning</a></td>	<td class="career">Cleaning Business Owner</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/401" target="_blank" rel="noopener noreferrer">Sales, Sports</a></td>	<td class="career">Sales Director, Sports Team</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/404" target="_blank" rel="noopener noreferrer">Management, Biotech</a></td>	<td class="career">Biotech Company, CEO</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/385" target="_blank" rel="noopener noreferrer">Business Development</a></td>	<td class="career">Sales, Director of Business Development</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/531" target="_blank" rel="noopener noreferrer">Sales, Management</a></td>	<td class="career">Sales Director, Assisted Living</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/563" target="_blank" rel="noopener noreferrer">Informational Technology</a></td>	<td class="career">Technology</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/564" target="_blank" rel="noopener noreferrer">Engineering</a></td>	<td class="career">Engineering</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/565" target="_blank" rel="noopener noreferrer">Accounting</a></td>	<td class="career">Accountant</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/566" target="_blank" rel="noopener noreferrer">Consulting</a></td>	<td class="career">Consulting</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/567" target="_blank" rel="noopener noreferrer">Law</a></td>	<td class="career">Lawyer</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/568" target="_blank" rel="noopener noreferrer">Marketing, Biotechnology</a></td>	<td class="career">Marketing, Biotechnology</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/569" target="_blank" rel="noopener noreferrer">Real Estate, Sales</a></td>	<td class="career">Real Estate Sales</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/534" target="_blank" rel="noopener noreferrer">Technology</a></td>	<td class="career">Technology, Director of Azure Apps</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/327" target="_blank" rel="noopener noreferrer">Technology</a></td>	<td class="career">Technology, Senior Account Manager Software</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/353" target="_blank" rel="noopener noreferrer">Writer, Speaker</a></td>	<td class="career">Author, Historian, Public Speaker, Documentarian</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/383" target="_blank" rel="noopener noreferrer">Busines Development</a></td>	<td class="career">Business Development, Biotechnology Company</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/405" target="_blank" rel="noopener noreferrer">Sales, Technology</a></td>	<td class="career">Technology Sales, Senior Director of Corporate Development</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/424" target="_blank" rel="noopener noreferrer">Sales, Technology</a></td>	<td class="career">Technology Sales</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/439" target="_blank" rel="noopener noreferrer">Customer Service, Technology</a></td>	<td class="career">Technology, Customer Success Manager</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/440" target="_blank" rel="noopener noreferrer">Federal Cloud Sales, Technology</a></td>	<td class="career">Technology, Federal Government Sales</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/535" target="_blank" rel="noopener noreferrer">Real Estate Development</a></td>	<td class="career">Real Estate</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/536" target="_blank" rel="noopener noreferrer">Healthcare, Physical Therapist</a></td>	<td class="career">Healthcare</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/537" target="_blank" rel="noopener noreferrer">Technology</a></td>	<td class="career">Technology</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/532" target="_blank" rel="noopener noreferrer">Sports</a></td>	<td class="career">Sports</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/538" target="_blank" rel="noopener noreferrer">Healthcare,Speech Pathologist</a></td>	<td class="career">Healthcare</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/552" target="_blank" rel="noopener noreferrer">Packaging</a></td>	<td class="career">Business</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/553" target="_blank" rel="noopener noreferrer">Education, Teacher</a></td>	<td class="career">Education</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/554" target="_blank" rel="noopener noreferrer">Education</a></td>	<td class="career">Education,Teaher</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/555" target="_blank" rel="noopener noreferrer">Healthcare</a></td>	<td class="career">Healthcare, Acupunturist</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/557" target="_blank" rel="noopener noreferrer">Healthcare, Mangement</a></td>	<td class="career">Healthcare, Life Coach</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/558" target="_blank" rel="noopener noreferrer">Food Service, Mangement</a></td>	<td class="career">Food Service, Mangement</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/559" target="_blank" rel="noopener noreferrer">Construction</a></td>	<td class="career">Construction</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/539" target="_blank" rel="noopener noreferrer">Construction, Roofing</a></td>	<td class="career">Construction</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/560" target="_blank" rel="noopener noreferrer">Education</a></td>	<td class="career">Education,Teacher</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/561" target="_blank" rel="noopener noreferrer">Administartion</a></td>	<td class="career">Administartion</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/328" target="_blank" rel="noopener noreferrer">Sonoographer, Military</a></td>	<td class="career">Sonographer, US AirForce</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/354" target="_blank" rel="noopener noreferrer">Entrepreneur, Bitcoin Mining</a></td>	<td class="career">CEO, Bitcoin Mining Company</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/372" target="_blank" rel="noopener noreferrer">Journalism, Newspaper</a></td>	<td class="career">Journalist, Senior Copy Editor</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/371" target="_blank" rel="noopener noreferrer">Lawyer</a></td>	<td class="career">Lawyer, Partner</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/546" target="_blank" rel="noopener noreferrer">Communications</a></td>	<td class="career">Communications</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/547" target="_blank" rel="noopener noreferrer">Recruiting, Human Resources</a></td>	<td class="career">Recruiting, Human Resources</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/548" target="_blank" rel="noopener noreferrer">Education, Teacher</a></td>	<td class="career">Education</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/544" target="_blank" rel="noopener noreferrer">Lawyer</a></td>	<td class="career">Law</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/545" target="_blank" rel="noopener noreferrer">Healthcare, Dentist</a></td>	<td class="career">Healthcare</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/571" target="_blank" rel="noopener noreferrer">Retail</a></td>	<td class="career">Entrepreneur, Retail</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/572" target="_blank" rel="noopener noreferrer">Cyber Security, Technology</a></td>	<td class="career">Technology</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/573" target="_blank" rel="noopener noreferrer">Education</a></td>	<td class="career">Higher Education, Professor</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/574" target="_blank" rel="noopener noreferrer">Healthcare</a></td>	<td class="career">Healthcare, Operations</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/575" target="_blank" rel="noopener noreferrer">Finance</a></td>	<td class="career">Finance, Insurance</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/329" target="_blank" rel="noopener noreferrer">Advertising</a></td>	<td class="career">Advertising, Account Supervisor</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/355" target="_blank" rel="noopener noreferrer">Venture Investing, Healthcare</a></td>	<td class="career">Investment Manager, Venture Capital</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/384" target="_blank" rel="noopener noreferrer">Real Estate Sales</a></td>	<td class="career">Real Estate Broker</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/407" target="_blank" rel="noopener noreferrer">Lawyer</a></td>	<td class="career">Lawyer, Real Estate</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/425" target="_blank" rel="noopener noreferrer">Real Estate Sales</a></td>	<td class="career">Real Estate Home Sales</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/457" target="_blank" rel="noopener noreferrer">Sales, Books</a></td>	<td class="career">Sales, Bookseller at Barnes &amp; Noble</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/438" target="_blank" rel="noopener noreferrer">Healthcare, Physician</a></td>	<td class="career">Physician, Chief of Vascular Surgery</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/369" target="_blank" rel="noopener noreferrer">Education, Teacher</a></td>	<td class="career">Teacher, Math</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/370" target="_blank" rel="noopener noreferrer">Lawyer</a></td>	<td class="career">Lawyer, Discrimination Unit</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/543" target="_blank" rel="noopener noreferrer">Banking</a></td>	<td class="career">Banking</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/570" target="_blank" rel="noopener noreferrer">Food Service, Mangement</a></td>	<td class="career">Food Service, Management</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/330" target="_blank" rel="noopener noreferrer">Interior Design</a></td>	<td class="career">Interior Design, Retail Construction</td>	</tr><tr>
+<td class="titletd"><a href="https://www.thescla.org/news/356" target="_blank" rel="noopener noreferrer">Sales, Food</a></td>	<td class="career">Hospitality, Food Sales Manager</td>	</tr><tr>
+
+
+
+
+	
+
+  </tr>
+</tbody></table>
+</div>
+</div>
+
+<script>
+function filterTable(event) {
+    var filter = event.target.value.toUpperCase();
+    var rows = document.querySelector("#myTable tbody").rows;
+    
+    for (var i = 0; i < rows.length; i++) {
+        var firstCol = rows[i].cells[0].textContent.toUpperCase();
+        var secondCol = rows[i].cells[1].textContent.toUpperCase();
+        if (firstCol.indexOf(filter) > -1 || secondCol.indexOf(filter) > -1) {
+            rows[i].style.display = "";
+        } else {
+            rows[i].style.display = "none";
+        }      
+    }
+}
+
+document.querySelector('#myInput').addEventListener('keyup', filterTable, false);
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+
+</script>
+   </div>
+</body>
+</html> 
